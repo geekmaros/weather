@@ -68,7 +68,7 @@ function getLocation(){
 
 	})
 
-	fetch(`http://api.apixu.com/v1/current.json?key=43fc62e0ac3344ae8b393524182709&q=${locate}`)
+	fetch(`https://api.apixu.com/v1/current.json?key=43fc62e0ac3344ae8b393524182709&q=${locate}`)
 	.then(res => res.json())
 	.then(data => {
 		
