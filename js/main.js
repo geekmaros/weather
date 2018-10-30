@@ -59,7 +59,7 @@ let locate = randomLocation();
 
 // GET LOCATION
 function getLocation(){
-	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locate}&appid=b6ef7c2fc764e43b5f9ec0a4a02adf59&unit=metric`)
+	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locate.toLowerCase()}&appid=b6ef7c2fc764e43b5f9ec0a4a02adf59&unit=metric`)
 	.then(res => res.json())
 	.then(data => {
 
@@ -68,7 +68,7 @@ function getLocation(){
 
 	})
 
-	fetch(`https://api.apixu.com/v1/current.json?key=43fc62e0ac3344ae8b393524182709&q=${locate}`)
+	fetch(`https://api.apixu.com/v1/current.json?key=43fc62e0ac3344ae8b393524182709&q=${locate.toLowerCase()}`)
 	.then(res => res.json())
 	.then(data => {
 		
@@ -86,10 +86,10 @@ function getLocation(){
 
 function findLocation(){
 	//e.preventDefault();
-	let locate = document.getElementById('filter');
+	let locate = document.getElementById('filter').value;
 	console.log(locate);
 	
-	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locate}&appid=b6ef7c2fc764e43b5f9ec0a4a02adf59&unit=metric`)
+	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locate.toLowerCase()}&appid=b6ef7c2fc764e43b5f9ec0a4a02adf59&unit=metric`)
 	.then(res => res.json())
 	.then(data => {
 
@@ -98,7 +98,7 @@ function findLocation(){
 
 	})
 
-	fetch(`https://api.apixu.com/v1/current.json?key=43fc62e0ac3344ae8b393524182709&q=${locate}`)
+	fetch(`https://api.apixu.com/v1/current.json?key=43fc62e0ac3344ae8b393524182709&q=${locate.toLowerCase()}`)
 	.then(res => res.json())
 	.then(data => {
 		
