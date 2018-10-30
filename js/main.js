@@ -86,9 +86,9 @@ function getLocation(){
 
 function findLocation(){
 	//e.preventDefault();
-	let filter = document.getElementById('filter').value;
+	let filter = document.getElementById('filter');
 	console.log(filter);
-	locate = filter.value
+	locate = filter.value;
 	
 	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locate}&appid=b6ef7c2fc764e43b5f9ec0a4a02adf59&unit=metric`)
 	.then(res => res.json())
